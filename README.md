@@ -9,19 +9,19 @@
 A dinâmica desse projeto consiste em avaliar todas as tecnologias vista até bootstrap exigindo uma inserção de solução especifica (intermediária) de cada uma delas no escopo global do projeto.
 Mínimo de 4 páginas e mínimo de 6 páginas.
 
-##### REQUSITOS JQUERY
+##### REQUISITOS JQUERY
 Utilizar uma seta ao lado direito da página que, a partir de 220px do topo do body, funcionasse como retorno suave para o inicio da página.
 
-##### REQUSITOS JAVASCRIPT
+##### REQUISITOS JAVASCRIPT
 Validação de um campo para CNPJ.
 
-##### REQUSITOS HTML
+##### REQUISITOS HTML
 Utilizar as tag semânticas article e aside.
   
-##### REQUSITOS CSS
+##### REQUISITOS CSS
 Estilização do Footer somente com CSS (sem bootstrap).
 
-##### REQUSITOS BOOTSTRAP
+##### REQUISITOS BOOTSTRAP
 * Layout responsivo usando grid; 
 * formulário;
 * menu drop-down/nav-bar responsivo;
