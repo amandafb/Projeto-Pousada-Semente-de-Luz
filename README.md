@@ -16,7 +16,7 @@ Utilizar uma seta ao lado direito da página que, a partir de 220px do topo do b
 Validação de um campo para CNPJ.
 
 ##### REQUSITOS HTML
-Utilizar as tag semânticas <article> e <aside>.
+Utilizar as tag semânticas article e aside.
   
 ##### REQUSITOS CSS
 Estilização do Footer somente com CSS (sem bootstrap).
