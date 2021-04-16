@@ -1,0 +1,222 @@
+:root {
+    --verde: #00a25e;
+    --verdeClaro: rgb(224, 241, 224);
+    --marrom: rgba(87,75,64,1);
+    --branco: #fff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/******** fontes ********/
+.font-bold {
+    font-weight: 600;
+}
+
+.font-especial {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.title-responsive {
+    font-size: 3.6rem;
+}
+
+.title-responsive-h2 {
+    font-size: 3rem;
+}
+
+/* margem */
+.margin-xg {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+/******** menu ********/
+#img-logo {
+    width: 100%;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color:var(--branco);
+    text-decoration: none;
+    background-color: var(--verde);
+}
+
+/******** carousel slides ********/
+.carousel-caption {
+    background-color: rgba(73, 73, 73, 0.103);
+}
+
+.carousel-caption h2 {
+    text-shadow: 2px 2px 2px #555;
+}
+
+.carousel-caption p {
+    text-shadow: 2px 2px 2px #555;
+    font-size: 1.4rem;
+}
+
+/******** back to top *********/
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 99;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    color: rgb(66, 66, 66);
+    background-color: rgba(255, 255, 255, 0.39);
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+#myBtn:hover {
+    color: #555;
+}
+
+.container-fluid {
+    overflow: hidden;
+}
+
+.bg-marrom {
+    background: var(--marrom);
+}
+
+.bg-verde {
+    background-color: var(--verde);
+}
+
+.bg-light-green {
+    background-color: var(--verdeClaro);
+}
+
+.img-item {
+    cursor: pointer;
+}
+
+.divisor {
+    width: 100%;
+    height: 1vh;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--branco);
+}
+
+.divisor-black {
+    width: 100%;
+    height: 1vh;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+.social-icon {
+    font-size: 1.8rem;
+}
+
+/******** Swiper ********/
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--branco);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/******** POUSADA ********/
+#img-banner {
+    width: 100%;
+}
+
+.card-icon {
+    font-size: 2rem;
+}
+
+/******** TARIFAS ********/
+.item-tarifa:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+/******** REQUISITO ESPECIFICO - FOOTER APENAS COM CSS ********/
+footer {
+    background: var(--marrom);
+    color: var(--branco);
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+.footer-text{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.footer-social a{
+    font-size: 1.8rem;
+    color: var(--branco);
+    padding: 10px;
+}
+
+/******** Ajustes de Responsividade ********/
+@media screen and (max-width: 768px) {
+    #acomodacoes h2 {
+        font-size: 2rem;
+    }
+
+    .title-responsive-h2 {
+        font-size: 2rem;
+    }
+
+
+    .carousel-caption h2 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    #contato h2{
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 833px) {
+    #navegacao {
+        font-size: 0.8rem;
+    }
+
+    #sobre h1 {
+        font-size: 2rem;
+    }
+
+    #sobre p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+}

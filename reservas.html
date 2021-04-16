@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Pousada Semente de Luz</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+        integrity="sha384-haqrlim99xjfMxRP6EWtafs0sB1WKcMdynwZleuUSwJR0mDeRYbhtY+KPMr+JL6f" crossorigin="anonymous">
+    </script>
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="img/favicon-32x32.png" />
+</head>
+
+<body>
+
+    <!-- Hearder -->
+    <header id="topo">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-marrom">
+
+            <!--Logo-->
+            <div class="col-8 col-sm-4">
+                <a class="navbar-brand" href="index.html"><img src="img/logo-retangular-semente-de-luz-branco.png"
+                        alt="" id="img-logo"></a>
+            </div>
+
+            <!-- Botão Hamburguer -->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navegacao">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Navegação-->
+            <div class="col-sm-8 ">
+                <div id="navegacao" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link font-bold" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-bold" href="pousada.html">Pousada</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle font-bold" href="#" role="button" id="dropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Acomodações
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="acomodacoes.html">Chalé Duplo</a>
+                                <a class="dropdown-item" href="acomodacoes.html">Chalé Triplo</a>
+                                <a class="dropdown-item" href="acomodacoes.html">Quarto de Vidro</a>
+                                <a class="dropdown-item" href="acomodacoes.html">Casa na Árvore</a>
+                                <a class="dropdown-item" href="acomodacoes.html">Quarto Familia</a>
+                                <a class="dropdown-item" href="acomodacoes.html">Quarto Hostel</a>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link font-bold" href="tarifas.html">Tarifas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-bold" href="index.html#contato">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="reservas.html" class="btn btn-outline-light px-3 active">Reservas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main  -->
+    <main>
+
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Reservas -->
+            <div class="row my-5">
+                <div class="col-12">
+                    <h2 class="display-4 text-center">Reservas</h2>
+                </div>
+                <div class="col-12">
+                    <p class="text-center">Preencha o formuário abaixo para fazer sua reserva ou se preferir entre em
+                        contato diretamente pelo nosso Whatsapp <a class="btn btn-success btn-sm bg-verde"
+                            href="https://wa.me/c/558897442579" target="_blank">Reservar Agora <i
+                                class="fab fa-whatsapp"></i></a></p>
+                </div>
+            </div>
+
+            <!-- Formulário -->
+            <form>
+                <div class="form-row mb-3">
+                    <h4>Dados Pessoais</h4>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nome">Nome completo: </label>
+                        <input type="text" name="nome" class='form-control' id="nome" placeholder="Nome completo"
+                            oninput="this.value = this.value.toUpperCase()" onblur="validaNome(this)"
+                            onkeypress="return event.charCode< 48 || event.charCode > 57">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <div class="input">
+                            <label for="email">E-mail: </label>
+                            <input type="email" name="email" id="email" class='form-control' placeholder="E-mail"
+                                onblur="validaEmail(this)" oninput="this.value=this.value.toLowerCase()">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label for="cep">CEP</label>
+                        <input class="form-control" type="text" id="cep" maxlength="8" placeholder="Apenas números"
+                            onblur="validaCep(this)" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+
+                    <div class="form-group col-md-10">
+                        <label for="rua">Endereco</label>
+                        <input class="form-control" type="text" placeholder="Rua - Número/Complemento - Bairro "
+                            id="rua" onblur="validaEndereco(this);" oninput="this.value=this.value.toUpperCase()">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                        <label for="cidade">Cidade</label>
+                        <input class="form-control" type="text" placeholder="Cidade" id="cidade"
+                            onblur="validaCidade(this);" oninput="this.value=this.value.toUpperCase()">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="estado">Estado</label>
+                        <select class="form-control" id="estado" onblur="validaEstado(this);">
+                            <option value="0">Escolher...</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="data">Data de Nascimento: </label>
+                        <input class='form-control bar-progress' type="date" id="data" onblur="validaIdade()" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="tel">Telefone: </label>
+                        <input type="tel" name="tel" id="tel" class='form-control bar-progress' maxlength="11"
+                            placeholder="Telefone + DDD (Apenas números)" onblur="validaTel(this), resetaEstilo(this)"
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="cpf">CPF: </label>
+                        <input type="text" name="cpf" class='form-control bar-progress' id="cpf"
+                            placeholder="CPF (Apenas números)" onblur="VerificaCPF()"
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="cadastrarCnpj">Cadastrar CNPJ?</label>
+                        <select class="form-control" id="cadastrarCnpj" onclick="validaCadastroCnpj(this)">
+                            <option value="0">Escolher...</option>
+                            <option value="1">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="cnpj">CNPJ</label>
+                        <input class="form-control" type="text" id="cnpj" placeholder="CNPJ (Apenas números)"
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57" onblur="validarCNPJ(this)"
+                            maxlength="14" disabled>
+                    </div>
+                </div>
+
+                <div class="form-row my-3">
+                    <h4>Acomodações</h4>
+                </div>
+
+                <div class="form-row d-flex align-items-end">
+                    <div class="form-group col-md-3">
+                        <label for="quartos">Quarto</label>
+                        <select class="form-control" id="quartos" onclick="validaQuarto()">
+                            <option value="0">Escolher...</option>
+                            <option value="1">Casa na Árvore</option>
+                            <option value="2">Chalé Duplo</option>
+                            <option value="3">Chalé Triplo</option>
+                            <option value="4">Quarto Familia</option>
+                            <option value="5">Quarto Hostel</option>
+                            <option value="6">Quarto de Vidro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="qtdadePessoas">Total de Pessoas por Quarto</label>
+                        <select class="form-control" id="qtdadePessoas" disabled onclick="dadosAcompanhante()">
+                            <option value="0">Escolher...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <button class="btn btn-dark" type="button" id="addPessoa" onclick="addAcompanhante()"
+                            style="display: none;">Adicionar Dados do
+                            Acompanhante</button>
+                    </div>
+
+                </div>
+
+                <div id="dadosAcompanhantes" style="display: none;">
+                    <div class="form-row" id="linhaAcompanhante1">
+                        <div class="form-group col-md-6">
+                            <label for="nome1">Nome completo: </label>
+                            <input type="text" name="nome" class='form-control bar-progress' id="nome1"
+                                placeholder="Nome completo" oninput="this.value = this.value.toUpperCase()"
+                                onblur="validaNome(this)" onkeypress="return event.charCode< 48 || event.charCode > 57"
+                                disabled>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="data1">Data de Nascimento: </label>
+                            <input class='form-control bar-progress' type="date" id="data1"
+                                onblur="validaIdadeAcompanhante()" disabled>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="rg1">RG </label>
+                            <input class='form-control bar-progress' type="text" id="rg1"
+                                placeholder="RG (Apenas números)"
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                                onblur="validarCNPJ(this)" maxlength="9" disabled>
+                        </div>
+                    </div>
+
+                    <div class="form-row" id="linhaAcompanhante2">
+                        <div class="form-group col-md-6">
+                            <label for="nome2">Nome completo: </label>
+                            <input type="text" name="nome" class='form-control bar-progress' id="nome2"
+                                placeholder="Nome completo" oninput="this.value = this.value.toUpperCase()"
+                                onblur="validaNome(this)" onkeypress="return event.charCode< 48 || event.charCode > 57"
+                                disabled>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="data2">Data de Nascimento: </label>
+                            <input class='form-control bar-progress' type="date" id="data2"
+                                onblur="validaIdadeAcompanhante()" disabled>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="rg2">RG </label>
+                            <input class='form-control bar-progress' type="text" id="rg2"
+                                placeholder="RG (Apenas números)"
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                                onblur="validarCNPJ(this)" maxlength="9" disabled>
+                        </div>
+                    </div>
+
+                    <div class="form-row" id="linhaAcompanhante3">
+                        <div class="form-group col-md-6">
+                            <label for="nome3">Nome completo: </label>
+                            <input type="text" name="nome" class='form-control' id="nome3" placeholder="Nome completo"
+                                oninput="this.value = this.value.toUpperCase()"
+                                onblur="validaNome(this), resetaEstilo(this)"
+                                onkeypress="return event.charCode< 48 || event.charCode > 57" disabled>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="data3">Data de Nascimento: </label>
+                            <input class='form-control' type="date" id="data3" onblur="validaIdadeAcompanhante()"
+                                disabled>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="rg4">RG</label>
+                            <input class='form-control' type="text" id="rg3" placeholder="RG (Apenas números)"
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                                onblur="validarCNPJ(this)" maxlength="9" disabled>
+                        </div>
+                    </div>
+
+                    <div class="form-row" id="linhaAcompanhante4">
+                        <div class="form-group col-md-6">
+                            <label for="nome4">Nome completo: </label>
+                            <input type="text" name="nome" class='form-control bar-progress' id="nome4"
+                                placeholder="Nome completo" oninput="this.value = this.value.toUpperCase()"
+                                onblur="validaNome(this), resetaEstilo(this)"
+                                onkeypress="return event.charCode< 48 || event.charCode > 57" disabled>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="data4">Data de Nascimento: </label>
+                            <input class='form-control bar-progress' type="date" id="data4" min="1891-04-02"
+                                max="2020-04-16" onblur="validaIdadeAcompanhante()" disabled>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="rg4">RG </label>
+                            <input class='form-control bar-progress' type="text" id="rg4"
+                                placeholder="RG (Apenas números)"
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                                onblur="validarCNPJ(this)" maxlength="9" disabled>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row mt-5">
+                    <button class="btn btn-success" type="submit">Enviar</button>
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+     <!-- Footer -->
+     <footer>
+        <div class="footer-text">
+            <h5>Pousada Semente de Luz</h5>
+            <small>© COPYRIGHT 2021 | TODOS OS DIREITOS RESERVADOS</small>
+            <small> Desenvolvido por Amanda Borim</small>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/pousadasementedeluz" target="_blank" class="social-icon"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/pousadasementedeluz/" target="_blank" class="social-icon"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/c/558897442579" target="_blank" class="social-icon"><i
+                    class="fab fa-whatsapp shadow"></i></a>
+        </div>
+    </footer>
+
+    <!-- REQUISITO VOLTAR AO TOPO -->
+    <a id="myBtn" title="Go to top" href="#topo"><i class="fas fa-long-arrow-alt-up"></i></a>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- JS Personalizado -->
+    <script src="js/scrips.js"></script>
+</body>
+
+</html>
